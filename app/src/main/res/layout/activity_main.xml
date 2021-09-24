@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <Button
+        android:id="@+id/buttonPopBackStack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="POP BACK STACK"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonPopBackStackInclusive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="POP_BACK_STACK_INCLUSIVE"
+        app:layout_constraintBottom_toTopOf="@id/buttonPopBackStack"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonPopBackStackNotInclusive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="POP_BACK_STACK_NOT_INCLUSIVE"
+        app:layout_constraintBottom_toTopOf="@id/buttonPopBackStackInclusive"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NEXT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonNextWithReordering" />
+
+    <Button
+        android:id="@+id/normalCommit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NORMAL_COMMIT_NEXT"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonNext" />
+
+    <Button
+        android:id="@+id/allowStateLossCommit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ALLOW_STATE_LOSS_COMMIT_NEXT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/normalCommit" />
+
+    <Button
+        android:id="@+id/nextNowWithAddBackStack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NEXT_NOW_WITH_ADD_BACK_STACK"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/allowStateLossCommit" />
+
+    <Button
+        android:id="@+id/buttonNextWithReordering"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NEXT WITH REORDERING"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
